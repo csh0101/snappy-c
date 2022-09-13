@@ -13,6 +13,8 @@ all: scmd verify sgverify libsnappyc.so.1
 
 snappy.o: snappy.c compat.h snappy-int.h
 
+libsnappy.a: snappy.o
+	ar rcs libsnappy.a snappy.o			
 scmd: scmd.o snappy.o map.o util.o
 
 CLEAN := scmd.o snappy.o scmd bench bench.o fuzzer.o fuzzer map.o verify.o \

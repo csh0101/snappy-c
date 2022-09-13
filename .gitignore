@@ -6,3 +6,4 @@ verify
 bench
 fuzzer
 ftracer
+.vscode
